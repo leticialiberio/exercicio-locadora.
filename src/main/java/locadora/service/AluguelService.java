@@ -14,7 +14,7 @@ import java.util.Optional;
  * Cadastro de Aluguel
  * Listagem dos Alugueis OK
  * Finalização do Aluguel (Devolução do veículo)
- *
+ * <p>
  * O cadastro do aluguel deve verificar se o carro que está sendo alugado existe,
  * e se ele está disponível ou não. Se não existir ou não estiver disponível,
  * deve ser retornado um erro para o usuário.
@@ -23,7 +23,7 @@ import java.util.Optional;
 public class AluguelService {
     private AluguelDB aluguelDB = new AluguelDB();
 
-    public Aluguel cadastrarAluguel(Veiculo veiculo, LocalDate dataEmprestimo, LocalDate dataDevolucao){
+    public Aluguel cadastrarAluguel(Veiculo veiculo, LocalDate dataEmprestimo, LocalDate dataDevolucao) {
         if (veiculo == null || !veiculo.isDisponivel())
             return null;
         if (dataEmprestimo.isAfter(dataDevolucao))
@@ -34,14 +34,17 @@ public class AluguelService {
         dataEmprestimo = LocalDate.now();
         dataDevolucao = dataEmprestimo.plusDays(7);
 
-        return aluguelDB.adicionarAluguel(new Aluguel());
+        Aluguel aluguel = new Aluguel(veiculo, dataEmprestimo, dataDevolucao);
+        aluguelDB.adicionarAluguel(aluguel);
+        return aluguel;
+
     }
 
-    public List<Aluguel> listarAlugueis(){
+    public List<Aluguel> listarAlugueis() {
         return aluguelDB.listarAlugueis();
     }
 
-    public boolean devolverVeiculoAlugado(String placa){
+    public boolean devolverVeiculoAlugado(String placa) {
         return aluguelDB.finalizarAluguel(placa);
     }
 }
