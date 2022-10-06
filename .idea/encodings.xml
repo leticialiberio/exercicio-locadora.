@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/locadora/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/locadora/controller/AluguelControllerTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/locadora/controller/VeiculoControllerTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/locadora/db/AluguelDBTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/locadora/db/VeiculoDBTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/locadora/model/Aluguel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/locadora/model/Veiculo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/locadora/service/AluguelServiceTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/locadora/service/VeiculoServiceTest.java" charset="UTF-8" />
+  </component>
+</project>
